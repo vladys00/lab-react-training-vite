@@ -1,7 +1,7 @@
 import './Profile.css'
-function Profile({profile}) {
+function Profile({profile, isSelected, all}) {
   return (
-    <div className="porfile">
+    <div className={`profile ${isSelected ? 'blue-background' : ''} ${all ? 'blue-background' : ''}`}>
       <img src={profile.img} alt="profile image" />
       <div>
         <p><b>First name:</b> {profile.firstName}</p>
